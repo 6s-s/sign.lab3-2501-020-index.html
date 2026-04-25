@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+.sign-overlay,
+.register-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+}
+#signToggle:checked ~ .sign-overlay {
+    display: block;
+}
+
+#regToggle:checked ~ .register-overlay {
+    display: block;
+}
+.header {
+    width: 1200px;
+    height: 90px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #87f5a3 0%, #779ee2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto 0;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+}
+.word1 {
+    font-size: 30px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+.user-info-item {
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.user-info-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+.user-name {
+    font-size: 16px;
+    color: white;
+    padding: 8px 15px;
+}
+.logout-btn {
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+#signToggle,
+#regToggle {
+    display: none;
+}
+.sign {
+    width: 360px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    padding: 40px 30px;
+    display: none;
+}
+.register {
+    width: 360px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    padding: 40px 30px;
+    display: none;
+}
+
+#signToggle:checked ~ .header .sign {
+    display: block;
+}
+#regToggle:checked ~ .header .register {
+    display: block;
+}
+.sign, .register {
+    animation: modalFadeIn 0.3s ease;
+}
+.signtitle {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #333;
+}
+.inputItem {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #87f5a3;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    padding: 0 15px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.inputItem:focus {
+    border-color: #779ee2;
+}
+.signBtn {
+    width: 100%;
+    height: 46px;
+    background: #779ee2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.signBtn:hover {
+    background: #5a7fc9;
+    transform: translateY(-2px);
+}
+.reg-tip {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.reg-link {
+    color: #779ee2;
+    cursor: pointer;
+    text-decoration: none;
+}
+.reg-link:hover {
+    text-decoration: underline;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+.close:hover {
+    color: #333;
+}
+.container {
+    width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    gap: 20px;
+}
+.left-nav {
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.nav-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #77e6ba;
+    color: #2e8b57;
+}
+.nav-menu {
+    list-style: none;
+}
+.nav-menu li {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.nav-menu li:hover {
+    background-color: #f0f5ff;
+    color: #2e8b57;
+    transform: translateX(5px);
+}
+.nav-menu li.active {
+    background-color: #e6f0ff;
+    color: #2e8b57;
+    font-weight: bold;
+}
+.main-content {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.main-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.book-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.book-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.book-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #eee;
+}
+.book-item h4 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.book-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.price {
+    color: #ff4444;
+    font-size: 18px;
+    font-weight: bold;
+}
+.right-ads {
+    width: 250px;
+    flex-shrink: 0;
+}
+.ad-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.ad-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #d5e14a;
+}
+.points-promo {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.points-promo1 {
+    background: linear-gradient(135deg, #25caee 0%, #bbedee 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.points-promo h3 {
+    margin-bottom: 10px;
+}
+.points-promo p {
+    font-size: 14px;
+}
+footer p {
+    background-color: rgb(76, 76, 76);
+    color: white;
+    margin: auto;
+    width: 1200px;
+    height: 75px;
+    border-radius: 15px;
+    line-height: 75px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台</title>
+    <link rel="stylesheet" href="lab3-2501-020-index.css">
+</head>
+<body>
+    <input type="checkbox" id="signToggle">
+    <input type="checkbox" id="regToggle">
+    <div class="sign-overlay"></div>
+    <div class="register-overlay"></div>   
+    <div class="header">
+        <div class="word1">数字展销平台</div>
+        <div class="user-info">
+            <label for="signToggle" class="user-info-item" id="loginBtn">登录/注册</label>
+            <span class="user-name" id="userNameDisplay" style="display:none;"></span>
+            <button class="logout-btn" id="logoutBtn" style="display:none;">退出</button>
+        </div>
+        <div class="sign">
+            <label for="signToggle" class="close">×</label>
+            <div class="signtitle">用户登录</div>
+            <input class="inputItem" id="loginUsername" placeholder="请输入账号">
+            <input class="inputItem" id="loginPassword" type="password" placeholder="请输入密码">
+            <button class="signBtn" id="loginSubmitBtn">登录</button>
+            <div class="reg-tip">还没有账号？<label for="regToggle" class="reg-link">立即注册</label></div>
+        </div>
+        <div class="register">
+            <label for="regToggle" class="close">×</label>
+            <div class="signtitle">用户注册</div>
+            <input class="inputItem" id="regUsername" placeholder="请输入账号">
+            <input class="inputItem" id="regPassword" type="password" placeholder="请输入密码">
+            <input class="inputItem" id="regConfirmPassword" type="password" placeholder="请确认密码">
+            <button class="signBtn" id="registerSubmitBtn">注册</button>
+        </div>
+    </div>  
+    <div class="container">
+        <div class="left-nav">
+            <div class="nav-title">首页</div>
+            <ul class="nav-menu">
+                <li class="active">图书分类</li>
+                <li>图书分类</li>
+                <li>热销推荐</li>
+                <li>限时活动</li>
+                <li>我的订单</li>
+                <li>我的书架</li>
+                <li>购物车</li>
+                <li>客服中心</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2 class="main-title">热门图书</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="深入理解计算机系统.jpg" alt="深入理解计算机系统">
+                    <h4>深入理解计算机系统</h4>
+                    <p>计算机经典教材</p>
+                    <div class="price">¥89.00</div>
+                </div>
+                <div class="book-item">
+                    <img src="python编程从入门到实践.jpg" alt="python">
+                    <h4>Python编程从入门到实践</h4>
+                    <p>零基础入门</p>
+                    <div class="price">¥69.00</div>
+                </div>
+                <div class="book-item">
+                    <img src="web前端开发实战.jpg" alt="web前端开发实战">
+                    <h4>Web前端开发实战</h4>
+                    <p>HTML+CSS+JS</p>
+                    <div class="price">¥59.00</div>
+                </div>
+                <div class="book-item">
+                    <img src="算法导论.jpg" alt="算法导论">
+                    <h4>算法导论</h4>
+                    <p>算法经典必读</p>
+                    <div class="price">¥129.00</div>
+                </div>
+                <div class="book-item">
+                    <img src="C++ Primer.jpg" alt="C++ Primer">
+                    <h4>C++ Primer</h4>
+                    <p>C++权威教程</p>
+                    <div class="price">¥119.00</div>
+                </div>
+                <div class="book-item">
+                    <img src="JavaScript高级程序设计.jpg" alt="JavaScript高级程序设计">
+                    <h4>JavaScript高级程序设计</h4>
+                    <p>前端必读</p>
+                    <div class="price">¥99.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-ads">
+            <div class="ad-card">
+                <div class="ad-title">积分活动</div>
+                <div class="points-promo">
+                    <h3>双倍积分周</h3>
+                    <p>本周所有图书消费均可获得双倍积分</p>
+                </div>
+                <div class="points-promo1">
+                    <h3>新用户福利</h3>
+                    <p>新注册赠送200积分，首次购书8折</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 数字展销平台 版权所有 | 积分兑换规则 | 用户协议 | 隐私政策</p>
+    </footer>
+</body>
+</html>
